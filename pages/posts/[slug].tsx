@@ -1,24 +1,22 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import Container from '../../components/container'
-import PostBody from '../../components/post-body'
-import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
-import Layout from '../../components/layout'
-import { getPostBySlug, getAllPosts } from '../../lib/api'
-import PostTitle from '../../components/post-title'
+import Container from 'components/container'
+import PostBody from 'components/post-body'
+import Header from 'components/header'
+import PostHeader from 'components/post-header'
+import Layout from 'components/layout'
+import { getPostBySlug, getAllPosts } from 'lib/api'
+import PostTitle from 'components/post-title'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
-import markdownToHtml from '../../lib/markdownToHtml'
-import PostType from '../../types/post'
+import { CMS_NAME } from 'lib/constants'
+import markdownToHtml from 'lib/markdownToHtml'
+import PostType from 'types/post'
+import { GetStaticProps, InferGetStaticPropsType, GetStaticPaths } from 'next'
 
-type Props = {
-  post: PostType
-  morePosts: PostType[]
-  preview?: boolean
-}
-
-const Post = ({ post, preview }: Props) => {
+const Post = ({
+  post,
+  preview,
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => {
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -55,14 +53,9 @@ const Post = ({ post, preview }: Props) => {
 
 export default Post
 
-type Params = {
-  params: {
-    slug: string
-  }
-}
-
-export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = params?.slug
+  const post = getPostBySlug(slug?.toString() || '', [
     'title',
     'date',
     'slug',
@@ -78,12 +71,12 @@ export async function getStaticProps({ params }: Params) {
       post: {
         ...post,
         content,
-      },
+      } as PostType,
     },
   }
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getAllPosts(['slug'])
 
   return {
