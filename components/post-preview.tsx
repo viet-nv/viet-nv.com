@@ -1,15 +1,12 @@
-import Avatar from './avatar'
-import DateFormater from './date-formater'
+import DateFormater from './DateFormater'
 import CoverImage from './cover-image'
 import Link from 'next/link'
-import Author from '../types/author'
 
 type Props = {
   title: string
   coverImage: string
   date: string
   excerpt: string
-  author: Author
   slug: string
 }
 
@@ -18,7 +15,6 @@ const PostPreview: React.FC<Props> = ({
   coverImage,
   date,
   excerpt,
-  author,
   slug,
 }: Props) => {
   return (
@@ -35,7 +31,6 @@ const PostPreview: React.FC<Props> = ({
         <DateFormater dateString={date} />
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
     </div>
   )
 }

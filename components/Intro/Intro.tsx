@@ -26,22 +26,20 @@ const Intro: React.FC = () => {
 
       <div className="sm:pl-8 sm:flex-1">
         <h1 className="mb-3 text-2xl sm:text-2xl md:text-3xl">
-          {"Hi! I'm "}
-          <b>{'Soleil 😎'}</b>
+          Hi! I&apos;m <b>{'Soleil 😎'}</b>
         </h1>
         <p className="mb-2">
           🐞{' '}
           <span className="italic">
-            {'Bug is like a wind 🌪,  always by my side.'}
+            Bug is like a wind 🌪, always by my side.
           </span>
         </p>
         <p>
-          {
-            'Chào mừng bạn đã đến với căn cứ nhỏ của tôi. Tôi là Việt - Nguyễn Văn Việt. Bạn có thể gọi tôi là Soleil (hoặc Lielos cũng được nhé 😄)'
-          }
+          Chào mừng bạn đã đến với căn cứ nhỏ của tôi. Tôi là Việt - Nguyễn Văn
+          Việt. Bạn có thể gọi tôi là Soleil (hoặc Lielos cũng được nhé 😄)
         </p>
         <p className="mb-4">
-          {'Đã đến đây rồi thì hãy ngó qua một chút xem tôi có gì nhé! 😉'}
+          Đã đến đây rồi thì hãy ngó qua một chút xem tôi có gì nhé! 😉
         </p>
         <div className="flex justify-center sm:justify-start">
           <a

@@ -1,44 +1,38 @@
-import Container from 'components/container'
-import MoreStories from 'components/more-stories'
-import HeroPost from 'components/hero-post'
+import Container from 'components/Container'
 import Intro from 'components/Intro'
 import { getAllPosts } from 'lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from 'lib/constants'
 import Post from 'types/post'
 import { GetStaticProps } from 'next'
+import SectionTitle from 'components/SectionTitle'
+import PostCard from 'components/PostCard'
 
 type Props = {
   allPosts: Post[]
 }
 
-const Index: React.FC<Props> = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0]
+const Homepage: React.FC<Props> = ({ allPosts }: Props) => {
   const morePosts = allPosts.slice(1)
   return (
     <>
       <Head>
-        <title>Next.js Blog Example with {CMS_NAME}</title>
+        <title>viet-nv | Bug is like a wind, alway by my side.</title>
       </Head>
       <Container>
         <Intro />
-        {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-          />
-        )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        <div className="mb-6">
+          <SectionTitle title="Thư giãn cùng Soleil" />
+          <div className="p-8 text-center">{'Comming Soon...'}</div>
+        </div>
+        <SectionTitle title="Chém gió cùng Soleil" />
+        {morePosts.length > 0 &&
+          morePosts.map((post) => <PostCard key={post.slug} {...post} />)}
       </Container>
     </>
   )
 }
 
-export default Index
+export default Homepage
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPosts = getAllPosts([

@@ -1,12 +1,14 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
+import Meta from 'components/Meta'
 
 const Layout: React.FC = ({ children }) => {
   return (
     <>
+      <Meta />
       <Header />
-      {children}
+      <div className="min-h-screen">{children}</div>
       <Footer />
     </>
   )

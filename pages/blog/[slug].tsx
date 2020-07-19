@@ -1,8 +1,7 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import Container from 'components/container'
+import Container from 'components/Container'
 import PostBody from 'components/post-body'
-import Header from 'components/header'
 import PostHeader from 'components/post-header'
 import { getPostBySlug, getAllPosts } from 'lib/api'
 import PostTitle from 'components/post-title'
@@ -21,7 +20,6 @@ const Post = ({
   }
   return (
     <Container>
-      <Header />
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
@@ -37,7 +35,6 @@ const Post = ({
               title={post.title}
               coverImage={post.coverImage}
               date={post.date}
-              author={post.author}
             />
             <PostBody content={post.content} />
           </article>

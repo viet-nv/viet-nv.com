@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Routes } from 'types/routes'
 import cx from 'classnames'
 import { useRouter } from 'next/router'
+import Container from 'components/Container'
 
 const Header: React.FC = () => {
   const { pathname } = useRouter()
@@ -10,7 +11,7 @@ const Header: React.FC = () => {
   const [showShadow, setShowShadow] = useState(false)
 
   const navClass = 'text-gray-700 hover:text-black p-4'
-  const activeClass = 'font-medium text-black'
+  const activeClass = 'font-medium text-black p-4'
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -25,7 +26,7 @@ const Header: React.FC = () => {
 
   return (
     <div className={cx('sticky top-0 bg-white', { shadow: showShadow })}>
-      <div className="container m-auto px-4 flex justify-between items-center h-12 sm:h-16 md:h-20">
+      <Container className="flex justify-between items-center h-12 sm:h-16 md:h-20">
         <div className="block md:hidden cursor-pointer p-3">
           <svg
             className="fill-current w-5"
@@ -49,11 +50,7 @@ const Header: React.FC = () => {
               const path = (Routes as any)[route]
               return (
                 <Link href={path} key={route}>
-                  <a
-                    className={cx(navClass, {
-                      [activeClass]: path === pathname,
-                    })}
-                  >
+                  <a className={path === pathname ? activeClass : navClass}>
                     {route}
                   </a>
                 </Link>
@@ -75,7 +72,7 @@ const Header: React.FC = () => {
             </svg>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   )
 }
