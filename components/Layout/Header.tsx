@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   const [showShadow, setShowShadow] = useState(false)
 
   const navClass = 'text-gray-700 hover:text-black p-4'
-  const activeClass = 'font-medium text-black p-4'
+  const activeClass = 'font-bold text-black p-4'
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
