@@ -47,6 +47,7 @@ const Intro: React.FC = () => {
             href="https://www.facebook.com/lielos13/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Facebook"
           >
             <svg
               stroke="currentColor"
@@ -65,6 +66,7 @@ const Intro: React.FC = () => {
             href="https://twitter.com/SoleilVn"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Twitter"
           >
             <svg
               stroke="currentColor"
@@ -83,6 +85,7 @@ const Intro: React.FC = () => {
             href="https://www.linkedin.com/in/nguy%E1%BB%85n-v%C4%83n-vi%E1%BB%87t-491112165/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Linkedin"
           >
             <svg
               stroke="currentColor"
@@ -100,6 +103,7 @@ const Intro: React.FC = () => {
             href="https://github.com/viet-nv"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Github"
           >
             <svg
               stroke="currentColor"
