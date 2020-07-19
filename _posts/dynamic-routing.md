@@ -1,6 +1,7 @@
 ---
 title: 'Dynamic Routing and Static Generation'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus.'
+excerpt:  'Up until now, after creating a new Project from a Git repository or one of our examples, all commits to its default branch were being deployed to Production.
+Today we are introducing a new default for newly created Projects, as well as an easy way to customize it from your Project Settings.'
 coverImage: '/assets/blog/dynamic-routing/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:

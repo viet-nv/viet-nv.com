@@ -9,7 +9,7 @@ const PostCard: React.FC<PostType & { className: string }> = ({
   title,
   date,
   excerpt,
-  tags = ['#react', '#nextjs'],
+  tags = [],
   className = '',
 }: PostType & { className?: string }) => {
   return (

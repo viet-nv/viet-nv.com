@@ -1,15 +1,13 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Container from 'components/Container'
-import PostBody from 'components/post-body'
-import PostHeader from 'components/post-header'
 import { getPostBySlug, getAllPosts } from 'lib/api'
-import PostTitle from 'components/post-title'
 import Head from 'next/head'
-import { CMS_NAME } from 'lib/constants'
 import markdownToHtml from 'lib/markdownToHtml'
 import PostType from 'types/post'
 import { GetStaticProps, InferGetStaticPropsType, GetStaticPaths } from 'next'
+import markdownStyles from 'components/markdown-styles.module.css'
+import DateFormater from 'components/DateFormater'
 
 const Post = ({
   post,
@@ -18,25 +16,48 @@ const Post = ({
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+
+  const { title, ogImage, content, date, tags = [] } = post
   return (
     <Container>
       {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
+        <div>Loading…</div>
       ) : (
         <>
           <article className="mb-32">
             <Head>
-              <title>
-                {post.title} | Next.js Blog Example with {CMS_NAME}
-              </title>
-              <meta property="og:image" content={post.ogImage.url} />
+              <title>{title} | viet-nv</title>
+              <meta property="og:image" content={ogImage.url} />
             </Head>
-            <PostHeader
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
+            <h1 className="text-center text-4xl font-bold mt-4 sm:mt-6 md:mt-8 leading-tight">
+              {title}
+            </h1>
+            <div className="text-center text-sm text-gray-700 mt-3">
+              <DateFormater dateString={date} />
+            </div>
+            <img
+              src={ogImage.url}
+              className="mt-8"
+              alt={`Cover image for ${title}`}
             />
-            <PostBody content={post.content} />
+            <div
+              className={markdownStyles['markdown']}
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+            <div className="flex justify-between">
+              <div>
+                {tags.map((tag: string) => (
+                  <span
+                    key={tag}
+                    className="text-blue-700 hover:text-blue-600 mr-4"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* <div>Chia sẻ:</div> */}
+            </div>
           </article>
         </>
       )}
