@@ -5,14 +5,13 @@ import Head from 'next/head'
 import Post from 'types/post'
 import { GetStaticProps } from 'next'
 import SectionTitle from 'components/SectionTitle'
-import PostCard from 'components/PostCard'
+import PostList from 'components/PostList'
 
 type Props = {
   allPosts: Post[]
 }
 
 const Homepage: React.FC<Props> = ({ allPosts }: Props) => {
-  const morePosts = allPosts.slice(1)
   return (
     <>
       <Head>
@@ -25,8 +24,7 @@ const Homepage: React.FC<Props> = ({ allPosts }: Props) => {
           <div className="p-8 text-center">{'Comming Soon...'}</div>
         </div>
         <SectionTitle title="Chém gió cùng Soleil" />
-        {morePosts.length > 0 &&
-          morePosts.map((post) => <PostCard key={post.slug} {...post} />)}
+        <PostList posts={allPosts} />
       </Container>
     </>
   )

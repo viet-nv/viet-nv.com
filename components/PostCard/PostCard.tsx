@@ -4,15 +4,16 @@ import DateFormater from 'components/DateFormater'
 import Link from 'next/link'
 import { Routes } from 'types/routes'
 
-const PostCard: React.FC<PostType> = ({
+const PostCard: React.FC<PostType & { className: string }> = ({
   slug,
   title,
   date,
   excerpt,
   tags = ['#react', '#nextjs'],
-}: PostType) => {
+  className = '',
+}: PostType & { className?: string }) => {
   return (
-    <>
+    <div className={`py-8 ${className}`}>
       <DateFormater dateString={date} className="text-sm text-gray-700" />
       <Link href={`${Routes.Blog}/[slug]`} as={`${Routes.Blog}/${slug}`}>
         <a>
@@ -21,7 +22,9 @@ const PostCard: React.FC<PostType> = ({
       </Link>
       <div className="mt-2">
         {tags.map((tag) => (
-          <span key={tag}>{tag}</span>
+          <span className="text-blue-700 hover:text-blue-600  mr-4" key={tag}>
+            {tag}
+          </span>
         ))}
       </div>
       <div
@@ -30,10 +33,12 @@ const PostCard: React.FC<PostType> = ({
       />
       <Link href={`${Routes.Blog}/[slug]`} as={`${Routes.Blog}/${slug}`}>
         <a>
-          <div className="mt-3">Đọc tiếp →</div>
+          <div className="mt-3 text-blue-700 hover:text-blue-600">
+            Đọc tiếp →
+          </div>
         </a>
       </Link>
-    </>
+    </div>
   )
 }
 
