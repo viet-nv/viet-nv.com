@@ -57,7 +57,7 @@ const Header: React.FC = () => {
 
           <Link href="/">
             <a>
-              <img src="/assets/logo.png" alt="Logo" className="h-6" />
+              <img src="/assets/logo.webp" alt="Logo" className="h-8" />
             </a>
           </Link>
 

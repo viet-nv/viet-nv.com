@@ -18,7 +18,7 @@ const Intro: React.FC = () => {
     >
       <div className="w-40 md:w-56 h-40 md:h-56 p-4 md:p-6 border rounded-full m-auto mb-5 sm:m-0">
         <img
-          src="/assets/avatar.png"
+          src="/assets/avatar.webp"
           alt="Avatar"
           className="w-full h-full pb-full rounded-full object-cover"
         />

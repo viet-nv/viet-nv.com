@@ -27,7 +27,7 @@ const SideDrawer: React.FC<Props> = ({ show, toggleSideDrawer }: Props) => {
       style={{ width: '300px' }}
     >
       <div className="h-16 flex justify-between items-center border-b px-4 ">
-        <img src="/assets/logo.png" alt="Logo" className="h-5" />
+        <img src="/assets/logo.webp" alt="Logo" className="h-8" />
 
         <svg
           stroke="currentColor"
