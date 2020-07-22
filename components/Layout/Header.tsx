@@ -41,8 +41,8 @@ const Header: React.FC = () => {
       />
       <div className={cx('sticky top-0 bg-white', { shadow: showShadow })}>
         <Container className="flex justify-between items-center h-16 md:h-20">
-          <button
-            className="block md:hidden p-3 focus:outline-none"
+          <div
+            className="block md:hidden p-3"
             onClick={() => setShowSideDrawer((prev) => !prev)}
           >
             <svg
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
               <title>Menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
-          </button>
+          </div>
 
           <Link href="/">
             <a>
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
               })}
             </div>
 
-            <button className="p-3">
+            <button className="p-3" aria-label="Search">
               <svg
                 stroke="currentColor"
                 fill="currentColor"
