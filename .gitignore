@@ -29,3 +29,7 @@ yarn-error.log*
 
 # Vercel
 .vercel
+
+# next-pwa
+**/public/workbox-*.js*
+**/public/sw.js*
