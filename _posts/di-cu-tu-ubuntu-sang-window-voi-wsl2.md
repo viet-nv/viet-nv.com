@@ -1,7 +1,8 @@
 ---
-title: 'Dynamic Routing and Static Generation'
-excerpt:  'Up until now, after creating a new Project from a Git repository or one of our examples, all commits to its default branch were being deployed to Production.
-Today we are introducing a new default for newly created Projects, as well as an easy way to customize it from your Project Settings.'
+title: 'Di cư từ Ubuntu sang Window 10 với WSL - Window Subsystem for Linux'
+excerpt: 'Ubuntu là một hệ điều hành tuyệt vời và được rất nhiều lập trình viên tin dùng. Tuy nhiên nếu bạn là một người yêu thích chơi game hoặc thường xuyên sử dụng các tiện ích văn phòng như office thì window vẫn là một môi trường cần thiết.
+Để đáp ứng được cả 2 nhu cầu nói trên, mọi người thường cài dual boot window và ubuntu. Việc này khá bất tiện khi switch qua lại giữa hai hệ điều hành. Tuy nhiên giờ đây bạn sẽ không cần phải lo lắng về vấn đề đó nữa khi Microsoft đã cho ra mắt tính năng vô cùng đáng giá đối với một lập trình viên yêu thích ubuntu như mình. Đó chính là Window Subsystem for Linux.'
+tags: ['#ubuntu', '#window', '#wsl2']
 coverImage: '/assets/blog/dynamic-routing/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:
