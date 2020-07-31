@@ -23,14 +23,7 @@ const BlogPage = ({
 export default BlogPage
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
+  const posts = getAllPosts(['title', 'date', 'slug', 'author', 'excerpt'])
 
   return {
     props: { posts },

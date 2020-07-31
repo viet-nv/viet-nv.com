@@ -35,13 +35,7 @@ const Post = ({
             <div className="text-center text-sm text-gray-700 mt-3">
               <DateFormater dateString={date} />
             </div>
-            {ogImage && (
-              <img
-                src={ogImage}
-                className="mt-8"
-                alt={`Cover image for ${title}`}
-              />
-            )}
+
             <div
               className={markdownStyles['markdown']}
               dangerouslySetInnerHTML={{ __html: content }}
@@ -78,7 +72,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'author',
     'content',
     'ogImage',
-    'coverImage',
   ])
   const content = await markdownToHtml(post.content || '')
 
