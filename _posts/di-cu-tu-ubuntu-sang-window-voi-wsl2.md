@@ -3,7 +3,7 @@ title: 'Window Subsystem for Linux: Đồng nhất môi trường làm viê�
 excerpt: 'Bạn thích code trên <b>Ubuntu</b> nhưng lại muốn chơi game trên <b>Window</b>. Bạn thích code trên <b>Ubuntu</b> nhưng lại cần làm <b>excel</b>... Bạn cài dual boot Window và Ubuntu để đáp ứng những nhu cầu trên. Tuy nhiên bạn thấy bất tiện mỗi lần switch qua lại những 2 nền tảng. Giờ đây bạn không cần phải lo những vấn đề đó nữa vì đã có <b>Window Subsystem for Linux (WSL)</b>.'
 tags: ['#ubuntu', '#window', '#wsl2']
 date: '2020-08-01T02:32:23.838Z'
-ogImage: '/assets/blog/wsl/wsl2.jpg'
+ogImage: 'https://viet-nv.vercel.app/assets/blog/wsl/wsl2.jpg'
 ---
 
 ![Cover Image](/assets/blog/wsl/wsl2.jpg)
