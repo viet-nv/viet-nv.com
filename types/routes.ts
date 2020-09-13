@@ -2,5 +2,5 @@ export enum Routes {
   Home = '/',
   Blog = '/blog',
   MiniGame = '/mini-game',
-  CV = '/cv',
+  CV = '/cv.pdf',
 }
