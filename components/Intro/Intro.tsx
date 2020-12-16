@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Intro.module.scss'
 import classname from 'classnames/bind'
+import Image from 'next/image'
 
 const cx = classname.bind(styles)
 
@@ -17,9 +18,12 @@ const Intro: React.FC = () => {
       )}
     >
       <div className="w-40 md:w-56 h-40 md:h-56 p-4 md:p-6 border rounded-full m-auto mb-5 sm:m-0">
-        <img
+        <Image
           src="/assets/avatar.webp"
           alt="Avatar"
+          layout="responsive"
+          width="fill"
+          height="fill"
           className="w-full h-full pb-full rounded-full object-cover"
         />
       </div>
