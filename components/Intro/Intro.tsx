@@ -38,13 +38,7 @@ const Intro: React.FC = () => {
             Bug is like a wind 🌪, always by my side.
           </span>
         </p>
-        <p>
-          Chào mừng bạn đã đến với căn cứ nhỏ của tôi. Tôi là Việt - Nguyễn Văn
-          Việt. Bạn có thể gọi tôi là Soleil (hoặc Lielos cũng được nhé 😄)
-        </p>
-        <p className="mb-4">
-          Đã đến đây rồi thì hãy ngó qua một chút xem tôi có gì nhé! 😉
-        </p>
+        <p className="mb-2">{"I'm my own master. Just the way I like it."}</p>
         <div className="flex justify-center sm:justify-start">
           <a
             className="mr-5"

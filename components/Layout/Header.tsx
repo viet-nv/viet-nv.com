@@ -39,7 +39,7 @@ const Header: React.FC = () => {
         })}
         onClick={toggleSideDrawer}
       />
-      <div className={cx('sticky top-0 bg-white', { shadow: showShadow })}>
+      <div className={cx('sticky top-0 bg-white z-50', { shadow: showShadow })}>
         <Container className="flex justify-between items-center h-16 md:h-20">
           <div
             className="block md:hidden p-3"

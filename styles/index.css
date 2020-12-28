@@ -13,3 +13,6 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+body {
+  font-family: Comic Mono, Cousine, monospace;
+}

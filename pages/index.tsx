@@ -16,6 +16,10 @@ const Homepage: React.FC<Props> = ({ allPosts }: Props) => {
     <>
       <Head>
         <title>viet-nv | Bug is like a wind, alway by my side.</title>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css"
+        />
       </Head>
       <Container>
         <Intro />
