@@ -34,7 +34,7 @@ const PostCard: React.FC<PostType & { className: string }> = ({
       <Link href={`${Routes.Blog}/[slug]`} as={`${Routes.Blog}/${slug}`}>
         <a>
           <div className="mt-3 text-blue-700 hover:text-blue-600">
-            Đọc tiếp →
+            Read more →
           </div>
         </a>
       </Link>

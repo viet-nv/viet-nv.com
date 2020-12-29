@@ -17,17 +17,19 @@ const Post = ({
     return <ErrorPage statusCode={404} />
   }
 
-  const { title, ogImage, content, date, tags = [] } = post
+  const { title, ogImage, content, date, tags = [], excerpt } = post
   return (
     <Container>
       {router.isFallback ? (
-        <div>Loading…</div>
+        <div>Loading… </div>
       ) : (
         <>
           <article className="mb-32">
             <Head>
               <title>{title} | viet-nv</title>
+              <meta property="og:title" content={`${title} | viet-nv`} />
               <meta property="og:image" content={ogImage} />
+              <meta property="og:description" content={excerpt} />
             </Head>
             <h1 className="text-center text-4xl font-bold mt-4 sm:mt-6 md:mt-8 leading-tight">
               {title}

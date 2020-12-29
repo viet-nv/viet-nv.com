@@ -1,8 +1,8 @@
 ---
 title: '[Algorithms with Rust] #1 firstDuplicate - CodeSignal'
-excerpt: 'Chào mừng bạn đến với series học Rust qua các bài Thuật Toán. #1 Tìm phần tử lặp đầu tiên'
+excerpt: 'Learning Rust by practice algorithms. #1 find the fist duplicate number in array'
 tags: ['#algorithm', '#rust', '#codesignal', '#firstDuplicate']
-date: '2020-12-28T22:13:04.000Z'
+date: '2020-12-28T15:13:04.000Z'
 ogImage: ''
 ---
 
@@ -63,7 +63,7 @@ fn firstDuplicate(a: Vec<i32>) -> i32 {
         if map.contains_key(&i) {
             return i
         } else {
-            map.insert(i, 1);   
+            map.insert(i, 1);
         }
     }
     return -1;

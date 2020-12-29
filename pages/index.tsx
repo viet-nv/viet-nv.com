@@ -24,10 +24,10 @@ const Homepage: React.FC<Props> = ({ allPosts }: Props) => {
       <Container>
         <Intro />
         <div className="mb-6">
-          <SectionTitle title="Thư giãn cùng Soleil" />
+          <SectionTitle title="Chill with Soleil" />
           <div className="p-8 text-center">{'Comming Soon...'}</div>
         </div>
-        <SectionTitle title="Chém gió cùng Soleil" />
+        <SectionTitle title="Soleil writes down" />
         <PostList posts={allPosts} />
       </Container>
     </>

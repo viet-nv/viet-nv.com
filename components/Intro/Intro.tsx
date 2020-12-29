@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './Intro.module.scss'
 import classname from 'classnames/bind'
 import Image from 'next/image'
